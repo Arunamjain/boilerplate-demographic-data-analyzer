@@ -1,9 +1,7 @@
-# This entrypoint file to be used in development. Start by reading README.md
-import demographic_data_analyzer
-from unittest import main
+from demographic_data_analyzer import calculate_demographic_data
+import unittest
+import test_module
 
-# Test your function by calling it here
-demographic_data_analyzer.calculate_demographic_data()
+unittest.main(module='test_module', exit=False, verbosity=2)
 
-# Run unit tests automatically
-main(module='test_module', exit=False)
+calculate_demographic_data()
